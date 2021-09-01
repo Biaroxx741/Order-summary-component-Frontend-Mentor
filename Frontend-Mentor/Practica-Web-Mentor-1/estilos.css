@@ -1,0 +1,132 @@
+* {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    text-align: center;
+    margin: 80px 25px;
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-repeat:repeat-x;
+    background-position-x: center;
+    background-color: hsl(225, 100%, 94%);
+}
+
+h1 {
+    font-weight: 900;
+}
+
+.card-container {
+    display: grid;
+    justify-items: center;
+}
+
+.card {
+    width: min-content;
+    border-radius: 20px;
+    background-color: hsl(225, 100%, 98%);
+}
+
+.card img{
+    border-radius: 20px 20px 0 0;
+}
+
+.card__description {
+    padding: 0 70px;
+    font-size: 16px;
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+}
+
+.card__plan-container {
+    background-color: hsla(225, 100%, 94%, 0.479);
+    border-radius: 20px;
+    margin: 15px 50px 15px 50px;
+    padding: 5px 15px 5px 15px;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 1fr 20px;
+    align-items: center;
+    /* justify-items: center; */
+}
+
+.card__plan-container > img {
+    display: block;
+    margin: 20px auto auto auto;
+    /* margin-top: 20px; */
+}
+
+.card_plan__button-container {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 10px;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+#change-button {
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+    border-bottom: solid 2px hsl(245, 75%, 52%);
+    background: none;
+    cursor: pointer;
+}
+
+/* #change-button::after {
+    content: ""; Necesario para que la pseudo clase after funque. 
+    display: block; pone al pseudo elemento en su propia linea.
+    margin: 0 auto; Centra el borde.
+    width: 95%; Tamaño.
+    border-bottom: solid 2px hsl(245, 75%, 52%);
+} */
+
+#change-button:hover {
+    border: none;
+    color: hsla(245, 75%, 52%, 0.8);
+}
+
+
+.card__plan__price {
+    text-align: left;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    grid-column: 2 / 3;
+}
+
+.card__plan__title {
+    text-align: left;
+    margin-left: 15px;
+    font-weight: 700;
+}
+
+#procced-button {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    height: 45px;
+    border:none;
+    border-radius: 10px;
+    background-color: hsl(245, 75%, 52%);
+    color: #ffff;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 8px 50px hsl(245, 67%, 42%);
+}
+
+#cancel-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: hsl(224, 23%, 55%);
+    font-weight: 900;
+    font-size: 14px;
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+
+#cancel-button:hover {
+    color: hsl(223, 47%, 23%);
+}

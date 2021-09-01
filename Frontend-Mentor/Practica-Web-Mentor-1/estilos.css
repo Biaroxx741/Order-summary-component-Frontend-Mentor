@@ -90,6 +90,8 @@ h1 {
 
 .card__plan__price {
     text-align: left;
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
     margin-bottom: 50px;
     margin-left: 15px;
     grid-column: 2 / 3;
@@ -113,7 +115,11 @@ h1 {
     font-size: 14px;
     font-weight: 900;
     cursor: pointer;
-    box-shadow: 0 8px 50px hsl(245, 67%, 42%);
+    box-shadow: 0 8px 30px hsl(245, 67%, 42%);
+}
+
+#procced-button:hover {
+    background-color: hsla(245, 75%, 52%, 0.726); 
 }
 
 #cancel-button {
@@ -129,4 +135,11 @@ h1 {
 
 #cancel-button:hover {
     color: hsl(223, 47%, 23%);
+}
+
+@media only screen and (max-width: 540px){
+
+    body {
+        background-image: url('./images/pattern-background-mobile.svg');
+    }    
 }

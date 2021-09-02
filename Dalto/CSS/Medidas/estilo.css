@@ -1,0 +1,57 @@
+/* 
+    em = es una forma de medida relativa que por defecto suele ser 16px
+        osea que 2em = 2*16px = 32px
+        pero fuera de eso, es relativa asi que si tiene un padre con alguna medida ya creada
+        adopta esa medida como 1em
+*/
+
+/* Ejemplo de em con padre aplicado */
+/* 
+.contact-form{
+    font-size: 20px;
+}
+.contact-form__h2{
+    Esto al ser un hijo en HTML del contact-form ahora
+    1em = 20px -> 5em = 5 * 20px = 100px
+    
+    font-size: 5em;
+} 
+*/
+
+/* 
+    vw = "viewport width" y hace referencia a TODO el ANCHO de la pantalla
+    *creo que ya no es mas "vm" sino que ahora es "vmax"*
+    vh = "viewport height" y hace referencia a TODO el ALTO de la pantalla
+*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* .contact-form{
+    color: wheat; */
+    /* le doy un color de fondo asi veo la diferencia */
+    /* background-color: black;
+    width: 50vmax;
+    height: 50vh; */
+
+    /* 
+        se puede lograr lo mismo poniendo como porcentaje 
+        width: 50%;
+        height: 50%;
+        *PERO LA DIFERENCIA RADICA EN QUE ESE PORCENTAJE SE APLICA EN BASE
+         AL PADRE, ASI QEU SI PONES 50% VA A SE REL 50% RESPECTO A LA CAJA
+         PADRE QUE CONTIENE AL ELEMENTO
+        *
+    */
+/* } */
+
+/* PROPIEDADES UWU */
+.contact-form{
+    font-size: 50px;
+    /* las comas sirven para que en caso de no tener la primer tipografia, intente usar la segunda, y asi.. */
+    font-family: 'Courier New', Courier, monospace;
+    /* el line height se divide a la mitad y se distribuye desde el centro de la letra */
+    line-height: 1.9; 
+    /* grosor de la tipografia */
+    font-weight: normal;
+}

@@ -1,0 +1,87 @@
+*{
+    font-family: 'Otomanopee One', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+/* 
+    ?PSEUDO-CLASES (COMO PSEUDO ELEMENTOS PERO CON ESCUCHAS)
+
+        *:hover ==> Se activa cuando el mouse esta encima del elemento
+                    !Funciona en CUALQUIER ELEMENTO
+        
+        *:link ==> Me permite modificar el aspecto de un enlace NUNCA visitado
+
+        *:visited ==> Como el LINK pero con los que ya HAYA VISITDADO
+
+        *:active ==> Funciona cuando sobre el elemento se MANTIENE CLICK
+
+        *:focus ==> Funciona para los INPUTS y se activa cuando tenemos foco sobre el elemento
+
+        *:lang(idioma) ==> Me permite dar estilos distintos segun el idioma del contenido
+                           !IMPORTANTE: para que reconozca los lenguages en HTML tengo que aclararlo con la 
+                           !            propiedad lang="idioma" siendo idioma por ejemplo: en, es, etc
+*/
+
+.caja1 {
+    height: 150px;
+    width: 150px;
+    background: slateblue;
+    margin: 25px;
+}
+
+.caja1:hover {
+    background: darkslateblue;
+    height: 200px;
+    width: 200px;
+}
+
+.enlace {
+    margin: 30px;
+    padding: 20px;
+    display: block;
+}
+
+.enlace:link {
+    color: red;
+}
+
+.enlace:visited {
+    color: royalblue;
+}
+
+.caja2 {
+    height: 300px;
+    width: 300px;
+    background: red;
+    margin: 25px;
+}
+
+.caja2:active {
+    background: blue;
+    width: 400px;
+}
+
+input{
+    height: 35px;
+    width: 250px;
+}
+
+input:focus{
+    background: lightgray;
+    width: 400px;
+}
+
+.idiomas-container{
+    margin: 30px;
+}
+
+b:lang(en){
+    background-color: lightcoral;
+    padding: 20px;
+}
+
+:lang(es){
+    background-color: aquamarine;
+    padding: 20px;
+}

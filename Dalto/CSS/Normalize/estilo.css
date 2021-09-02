@@ -1,0 +1,104 @@
+/* 
+    DIFERENCIA ENTRE ELEMENTO BLOQUE E INLINE O LINEA
+    
+    BLOQUE: ocupa TODO el ancho de su contenedor(si no lo contiene nada, ocupa TODO el ancho de la pagina)
+            * AL OCUPAR TODO EL ANCHO EL SIGUIENTE ELEMENTO QUE AGREGUE SE AGREGA ABAJO *
+            * SE PUEDE MODIFICAR SU width Y height *
+    LINEA: ocupa SOLO lo que ocupa su contenido(ejemplo el largo del texto de un <b>)
+           * AL OCUPAR SOLO LO QUE OCUPE SU CONTENIDO EL SIGUIENTE ELEMENTO QUE AGREGUE SE AGREGA AL LADO *
+           * NO SE PUEDE MODIFICAR SU width Y height *
+
+    PERO ESTO SE PUEDE CAMBIAR SI ES BLOCK O INLINE IGUAL CON LA PROPIEDAD "DISPLAY"
+    elemento_que_quiero_modificar{
+        * depende de lo que quiera que sea elijo *
+        display: block / inline;   
+    }
+    ejemplo:
+    h2{
+        display: inline;
+    }
+*/
+
+*{
+    font-family: 'Otomanopee One', sans-serif;
+    font-weight: 100;
+}
+
+.contact-form{
+    font-size: 25px;
+}
+
+.contact-form__h2{
+    /* 2 * 25px = 50px */
+    font-size: 2em;
+    color: black;
+}
+
+/*  PADDING
+
+    padding => distancia entre texto y caja
+    
+    padding-top/bottom/left/right => padding en esas direcciones
+
+    padding: 10px  ---> SI NO ACLARO LADO, DA ESA CANTIDAD EN TODAS LAS DIRECCIONES
+
+    padding: (bottomYtop)px (left/right)px;
+    OSEA=> padding: 10px 25px;  ---> me pone 10 en bottom y top, y 25 en left y right
+
+    padding: (top)px (right)px (bottom)px (left)px;
+    OSEA=> padding: 10px 20px 30px 40px;  ---> 10 en top, 20 en right, 30 en bottom y 40 en left
+
+    * SI ESCRIBO SOLO TRES POR EJEMPLO, EL FALTANTE SE RELLENA CON SU COMPLEMENTO(lef/right) (top/bottom) *
+    padding: 10px 20px 30px; ---> 10 en top, 20 en right y left, 30 en bottom
+
+--------------------------------------------------------
+
+    MARGIN
+        IGUAL QUE EL PADDING PERO SEPARA LAS CAJAS
+
+*/
+
+/* 
+    Model de caja: PROPIEDADES JERARQUIA DE QUE SE PONE PRIMERO
+
+    1º CONTENT => se modifica con "line-height"
+    2º PADDING => se modifica con "padding"
+    3º BORDER => se modifica con "border"
+    4º MARGIN => se modifica con "margin"
+
+*/
+
+
+h2 {
+    background-color: red;
+    
+    display: inline-block;
+    
+    padding: 100px;
+    
+    text-align: center;
+    
+    margin: 10px;
+
+    /* Para redondear completamente poner 50% */
+    border-radius: 50%;
+
+    /* Borde del objeto
+        border: (GROSOR) ESTILO(solid/dashed/dotted/double/groove/inset/outset/ridge/etc) COLOR
+    */
+    border: 5px solid royalblue;
+
+    /* Sombra de caja
+        box-shadow: (ejeX)px (ejeY)px (desemfoqueDeSombra)px (borde generalemnte 0) (color);
+        se puede duplicar el efecto copiando lo mismo y pegandolo seguido de una coma
+    */
+    box-shadow: 5px 5px 15px 0 black;
+
+    /* Sombra de texto
+        text-shadow: (ejeX)px (ejeY)px (desemfoqueDeSombra)px (color);
+        se puede duplicar el efecto copiando lo mismo y pegandolo seguido de una coma
+    */
+    text-shadow: 2px 2px 7px white, 2px 2px 7px white;
+
+    transform: rotate(45deg);
+}

@@ -1,0 +1,82 @@
+*{
+    font-family: 'Otomanopee One', sans-serif;
+    font-weight: 100;
+}
+
+/* 
+                        !CROSS AXIS
+    ?ALIGN-SELF: ALINEA EN EL CROSS AXIS
+        *TIENE LAS MISMAS PROPIEDADES QUE EL ALIGN DE UN FLEX CONATINER
+        *(BASELINE,FLEX-START,FLEX-END,CENTER, ETC)
+
+    ?MARGIN: FUNCIONA DISTINTO EN UN FLEX ITEM
+        !HACE LO CONTRARIO QUE LE PONGAS SI LE DECIS UNA DIRECCION Y LO PONES EN AUTO
+        *margin-top:auto;  ==> te lo deja ABAJO
+        *margin-left:auto; ==> te lo deja a la DERECHA
+        *SE PUEDEN MEZCLAR PARA POSICIONAR EN CUALQUIER ESQUINA BASICAMENTE
+        !SI PONGO 2 CONTRARIAS(margin-left y right O top y bottom) LO CENTRA ENTRE ESOS 2
+
+    ?FLEX-GROW: REPARTE EL ESPACIO SOBRANTE ENTRE LOS FLEX ITEMS
+        *FLEX-GROW: 1;  ==> Hace lo del titulo xd
+        *EL NUMERO QUE LE PONGO REPRESENTA CUANTAS PARTES RECIBE DEL ESPACIO SOBRANTE
+        *PUEDO APLICARLO A UNA CLASE Y QUE SOLO LA CAJA QUE QUIERO TENGA EL GROW
+
+    ?FLEX-BASIS: LITERALMENTE LO MISMO QUE EL WIDTH
+        *FLEX-BASIS: (tamaño)px;
+        !PERO TIENE MAS IMPORTANCIA QUE EL WIDTH
+
+    ?FLEX-SHRINK: DECIDE CUANTO ESPACIO CEDE UN ITEM
+        *FLEX-SHRINK: (0.1,0.5, 0, 1,2,3,ETC);
+        *0 = NO CEDE ESPACIO
+        *0.5 = CEDE SOLO LA MITAD DE LO QUE CEDERIA NORMLMENTE
+        *EJEMPLO: tengo 3 items de 300px de width y estan en un espacio de 500px
+        *          si un item tiene flex grow de 1 este va a ceder al menos 100px
+        *          suyos para darselos a los otros dos items
+
+    ?FLEX: SHORTHAND DE LOS 3 DE ARRIBA
+        *FLEX: flex-grow flex-shrink flex-basis;
+
+    ?ORDER: COMO EL Z-INDEX PERO EN EL MAIN AXIS
+        *ORDER: numero;
+        !EL ELEMENTO CON ORDER MAS GRANDE SE PONE MAS AL
+        !FINAL DE DONDE APUNTE EL MAIN AXIS
+        *PUEDO JUGAR TAMBIEN CON EL CROSS AXIS SI USO EL
+        *   FLEX-DIRECTION CON COLUMN
+*/
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.flex-item {
+    background: #248;
+    color: #fff;
+    margin: 5px;
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.orange {
+    background: orange;
+    flex-basis: 300px;
+    order: 4; 
+}
+
+.green {
+    background: green;
+    /* align-self: center; */
+    /* margin-top: auto; */
+
+    /* *FORMA DE CENTRAR FACIL 
+        ?CENTRO DE TODO
+        *   margin: auto;
+        ?CENTRO VERTICAL SOLAMENTE
+        *   margin: auto 0;
+        ?CENTRO HORIZONTAL SOLAMENTE
+        *   margin: auto 0;
+    */
+}
